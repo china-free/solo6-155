@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cb"
+version = "0.1.0"
+description = "Minimal terminal clipboard manager"
+requires-python = ">=3.8"
+dependencies = [
+    "pyperclip>=1.8.2",
+    "prompt-toolkit>=3.0.40",
+]
+
+[project.scripts]
+cb = "cb_cli:main"
+
+[tool.setuptools]
+py-modules = ["cb_cli", "cb_store", "cb_watcher", "cb_search"]
